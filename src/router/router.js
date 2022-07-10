@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import("@/components/duplicate-players/duplicate-players"),
+      component: () => import("@/components/Home/home"),
     },
     {
         path: "/dup",
@@ -16,6 +16,13 @@ const router = createRouter({
         meta: {
         },
     },
+    {
+      path: "/edit/:playerid/:teamid/:playername/:playerslug",
+      name: "edit_duplicate_players",
+      component: () => import("@/components/duplicate-players/edit-player"),
+      meta: {
+      },
+  },
   ]
 })
 

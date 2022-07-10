@@ -22,7 +22,8 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
+        background-color: #B0C2E2;
         color: #2c3e50;
-        margin-top: 60px;
+        margin-top: 5px;
     }
 </style>

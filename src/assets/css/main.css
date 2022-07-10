@@ -142,12 +142,12 @@
     }
     .prefix-live-center .cr-player-perform .cr-header {
         color:white;
-        background: #1d2742;
+        background: #001e6e;
         height: 100px;
     }
     .prefix-live-center .cr-player-perform .cr-footer {
         color:white;
-        background: #14213d;
+        background: #001F5B;
         height: 200px;
     }
 
@@ -255,7 +255,7 @@
   
   .footer .footer_bottom {
     width: 100%;
-    background: #151515;
+    background: #001F5B;
     padding-top: 10px;
     padding-bottom: 10px
   }

@@ -7,6 +7,7 @@ import router from './router/router.js';
 //===================================================================================================
 // import vue_utils from './vue/vue_utils';
 // Vue.use(vue_utils);
+// Vue.use(vue_utils);
 
 //=================Assets Loading========================================================
 import './assets/css/main.css';
