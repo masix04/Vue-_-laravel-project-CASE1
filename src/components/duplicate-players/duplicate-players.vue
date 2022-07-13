@@ -68,7 +68,8 @@
                 }
             },
             getDuplicatePlayers() {
-                let url = "http://localhost:8000/api/duplicate-players";
+                // let url = "http://localhost:8000/api/duplicate-players";
+                let url = "http://localhost:8001/api/duplicate-players";
                 this.axios.get(url)
                 .then(response => {
                     if(response) {
@@ -93,6 +94,7 @@
             },
             // delete_player(player_team_id, player_id, team_id) {
             //     let url = "http://localhost:8000/api/delete-duplicate-players";
+            //     let url = "http://localhost:8001/api/delete-duplicate-players";
             //     let payload = {
             //       'player_team_id': player_team_id,
             //       'player_id': player_id,
@@ -113,7 +115,8 @@
             //     .catch(error => console.log(error));
             // },
             delete_player_with_post(player_team_id, player_id, team_id) {
-                let url = "http://localhost:8000/api/delete-duplicate-players";
+                // let url = "http://localhost:8000/api/delete-duplicate-players";
+                let url = "http://localhost:8001/api/delete-duplicate-players";
 
                 this.axios.post(url, {
                     _method: 'DELETE',
