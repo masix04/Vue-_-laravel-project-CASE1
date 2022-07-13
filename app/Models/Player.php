@@ -9,10 +9,11 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+// use App\Http\helpers;
 
 /**
  * Class Player
- * 
+ *
  * @property int $id
  * @property int $sport_id
  * @property int|null $is_published
@@ -49,7 +50,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $meta_description_hindi
  * @property string $stand_first
  * @property string $stand_first_hindi
- * 
+ *
  * @property Sport $sport
  * @property Collection|FootballLineup[] $football_lineups
  *
@@ -117,12 +118,13 @@ class Player extends Model
 
 	public function getShortNameAttribute()
 	{
+		// return getShortName($this->name ?? '');
 		return ;
 	}
 
 	public function getAvatarAttribute()
 	{
-		return ;
+		return "https://img.sixlogics.com/avatars/cricket/players/300x300/{$this->id}.png";
 	}
 
 	public function sport()

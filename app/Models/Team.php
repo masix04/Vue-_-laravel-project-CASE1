@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Team
- * 
+ *
  * @property int $id
  * @property int $sport_id
  * @property int|null $is_published
@@ -42,7 +42,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $meta_description_hindi
  * @property string $stand_first
  * @property string $stand_first_hindi
- * 
+ *
  * @property FootballOfficial|null $football_official
  * @property Sport $sport
  * @property Collection|CricInning[] $cric_innings
@@ -100,6 +100,13 @@ class Team extends Model
 		'stand_first',
 		'stand_first_hindi'
 	];
+
+    protected $appends = ['flag'];
+
+    public function getFlagAttribute() {
+        return "https://cric.livescoring.cc/teamflags/{$this->id}.png";
+        // return asset("/storage/country_flags/{$this->id}.png");
+    }
 
 	public function football_official()
 	{
