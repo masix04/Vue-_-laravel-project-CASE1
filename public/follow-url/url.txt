@@ -1,0 +1,1 @@
+https://vue-crud.github.io/guide/essentials/introduction.html#app-layout-on-desktop
