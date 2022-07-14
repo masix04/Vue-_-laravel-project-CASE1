@@ -22,7 +22,12 @@ const router = createRouter({
       component: () => import("@/components/duplicate-players/edit-player"),
       meta: {
       },
-  },
+    },
+    {
+        path: '/cms',
+        name: 'in_progress_cms',
+        component: () => import("@/components/layouts/cms-1"),
+    }
   ]
 })
 
