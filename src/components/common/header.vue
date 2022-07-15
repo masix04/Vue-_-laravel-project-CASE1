@@ -7,7 +7,7 @@
                     <h1>-</h1>
                     <ul class="nav-btns">
                         <li> <routerLink :to="{name: 'home'}"> Home </routerLink></li>
-                        <li> <routerLink :to="{name: 'duplicate_players'}"> Remove Duplicate PLayers Anomalies </routerLink></li>
+                        <li> <routerLink :to="{name: 'duplicate_teams'}"> Remove Duplicate Teams Anomalies </routerLink></li>
                         <li> <routerLink :to="{name: 'in_progress_cms'}"> CMS </routerLink></li>
                     </ul>
                 </div>

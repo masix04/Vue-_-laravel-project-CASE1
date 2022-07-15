@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul>
-            <li> <routerLink :to="{name: 'duplicate_players'}"> Remove Duplicate PLayers Anomalies </routerLink></li>
+            <li> <routerLink :to="{name: 'duplicate_teams'}"> Remove Duplicate PLayers Anomalies </routerLink></li>
         </ul>
     </div>
 </template>

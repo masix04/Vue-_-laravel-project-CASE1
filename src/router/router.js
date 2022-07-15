@@ -9,17 +9,18 @@ const router = createRouter({
       name: 'home',
       component: () => import("@/components/Home/home"),
     },
+    /** Routes for Teams   */
     {
         path: "/dup",
-        name: "duplicate_players",
-        component: () => import("@/components/duplicate-players/duplicate-players"),
+        name: "duplicate_teams",
+        component: () => import("@/components/duplicate-teams/duplicate-teams"),
         meta: {
         },
     },
     {
-      path: "/edit/:playerid/:teamid/:playername/:playerslug",
-      name: "edit_duplicate_players",
-      component: () => import("@/components/duplicate-players/edit-player"),
+      path: "/edit/:teamid/:tourid/:teamname/:teamslug",
+      name: "edit_duplicate_teams",
+      component: () => import("@/components/duplicate-teams/edit-team"),
       meta: {
       },
     },

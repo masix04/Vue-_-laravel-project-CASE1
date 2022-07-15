@@ -2,7 +2,7 @@
 <template>
     <div id="app">
         <ul class="app-ul">
-            <li> <routerLink :to="{name: 'duplicate_players'}"> WORKING CMS </routerLink></li>
+            <li> <routerLink :to="{name: 'duplicate_teams'}"> WORKING CMS </routerLink></li>
             <li> <routerLink :to="{name: 'in_progress_cms'}"> IN CREATION CMS </routerLink></li>
         </ul>
         <div v-if="!($route.name.includes('cms'))">
