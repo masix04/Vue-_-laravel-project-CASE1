@@ -4,7 +4,6 @@
         <div class="prefix-live-center">
             <div class="cr-player-perform">
                 <div class="cr-header">
-                    <h1>-</h1>
                     <ul class="nav-btns">
                         <li> <routerLink :to="{name: 'home'}"> Home </routerLink></li>
                         <li> <routerLink :to="{name: 'duplicate_players'}"> Remove Duplicate PLayers Anomalies </routerLink></li>

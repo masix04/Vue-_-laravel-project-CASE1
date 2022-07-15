@@ -18,7 +18,7 @@
                             <th><b>EDIT</b></th>
                             <th><b>DELETE</b></th>
                         </thead>
-                        <tbody>
+                        <tbody v-if="data.players">
 
                             <tr v-for="player,key in data.players" :key="key">
                                 <td :style="[ getSafe( () => ( (player.player_id == data.players[key+1].player_id) && (player.team_id == data.players[key+1].team_id) )? {backgroundColor : 'red', color: 'white', fontSize: 20+'px', fontWeight: 600} : {backgroundColor : 'white'} ) ] "> {{ key }} </td>
@@ -35,6 +35,7 @@
 
                         </tbody>
                     </table>
+                    <p v-if="!data.players"> No Duplicate Players. </p>
                 </div>
             </div>
         </div>
@@ -49,10 +50,14 @@
             return {
                 data: [],
                 axios: axios,
+                deleteCheck: '',
             }
         },
         watch: {
             'this.data' () {
+                this.getDuplicatePlayers();
+            },
+            deleteCheck () {
                 this.getDuplicatePlayers();
             }
         },
@@ -118,18 +123,21 @@
                 // let url = "http://localhost:8000/api/delete-duplicate-players";
                 let url = "http://localhost:8001/api/delete-duplicate-players";
 
-                this.axios.post(url, {
-                    _method: 'DELETE',
-                    header: {
-                        Authorization: "***"
-                    },
+                this.axios.delete(url, {
                     data: {
-                        'player_team_id': player_team_id,
-                        'player_id': player_id,
-                        'team_id': team_id,
+                        "player_team_id": player_team_id,
+                        "player_id": player_id,
+                        "team_id": team_id,
                     },
                 })
+                .then(response => {
+                    this.deleteCheck = response.data.deleted;
+                    if(this.deleteCheck == true) {
+                        this.deleteCheck = this.deleteCheck + '-'+response.data.data;
+                    }
+                }) 
                 .catch(error => console.log(error));
+
             }
         }
     }
