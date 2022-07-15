@@ -19,7 +19,16 @@ Route::resource('Api', \IndexController::class);
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+/**   Players */
+/** ------------------------------------------------------------------------   */
 Route::get('duplicate-players', 'Controller@getDuplicatePlayers');
 Route::DELETE('delete-duplicate-players', 'Controller@deleteDuplicatePlayers');
 Route::put('edit-duplicate-players', 'Controller@editDuplicatePlayers');
+/** ------------------------------------------------------------------------   */
+
+/**   Teams */
+/** ------------------------------------------------------------------------   */
+Route::get('duplicate-teams', 'Controller@getDuplicateTeams');
+Route::DELETE('delete-duplicate-teams', 'Controller@deleteDuplicateTeams');
+Route::put('edit-duplicate-teams', 'Controller@editDuplicateTeams');
+/** ------------------------------------------------------------------------   */

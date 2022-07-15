@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class TournamentTeam
- * 
+ *
  * @property int $id
  * @property int $tournament_id
  * @property int $team_id
@@ -33,4 +33,8 @@ class TournamentTeam extends Model
 		'tournament_id',
 		'team_id'
 	];
+
+    public function teams() {
+        return $this->belongsTo(Team::class, 'team_id');
+    }
 }
